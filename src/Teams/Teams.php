@@ -12,7 +12,7 @@ class Teams Extends \CFLPHP\Base {
 	 * Get a list of all teams
 	 * @return Object Basic data for all CFL teams
 	 */
-	public function getTeams($config) {
+	public function getTeams($config = array()) {
 
 		$endpoint = $this->buildEndpoint(['teams']);
 
