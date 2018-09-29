@@ -6,7 +6,7 @@ This is a simple PHP SDK for interacting with the CFL API. All API documentation
 Installation
 ------
 
-`composer install christohill/cfl-api-php`
+`composer install christohill/cfl-api-php dev-master`
 
 Usage
 ------
