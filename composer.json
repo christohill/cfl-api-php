@@ -1,0 +1,26 @@
+{
+    "name": "christohill/cfl-api-client-php",
+    "description": "A PHP wrapper for the CFL.ca API",
+    "type": "library",
+    "homepage": "https://github.com/christohill/cfl-api-php",
+    "keywords": ["php", "wrapper", "api", "client", "cfl", "football"],
+    "minimum-stability": "dev",
+    "license": "MIT",
+    "authors": [
+        {
+          "name": "Chris Tohill",
+          "email": "hello@visualoverdose.ca"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/christohill/cfl-api-php/issues"
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "CFLPHP\\": "src"
+        }
+    }
+}
