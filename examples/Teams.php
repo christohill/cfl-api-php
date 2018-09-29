@@ -7,7 +7,7 @@ use CFLPHP\Teams\Teams;
 $apiKey = "edf59be9216e66eb17093574376d4c5f"; // Not a valid key
 
 // This example will return a list of all teams
-echo "<h1>1) List all teams with rosters</h1>";
+echo "<h1>1) List all teams/h1>";
 
 $teams = new Teams();
 $teams->setKey($apiKey);
