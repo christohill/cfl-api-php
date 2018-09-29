@@ -1,5 +1,5 @@
 {
-    "name": "christohill/cfl-api-client-php",
+    "name": "christohill/cfl-api-php",
     "description": "A PHP wrapper for the CFL.ca API",
     "type": "library",
     "homepage": "https://github.com/christohill/cfl-api-php",
