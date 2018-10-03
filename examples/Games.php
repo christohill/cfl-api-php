@@ -14,19 +14,6 @@ $data = $games->getGames(2018);
 // Dump data
 var_dump($data);
 
-// This example will return a list of games with boxscore
-echo "<h1>2) List games with boxscore</h1>";
-$games = new Games();
-$games->setKey($apiKey);
-$config = array(
-	'include' => array(
-		'boxscore'
-	)
-);
-$data = $games->getGames(2018, $config);
-// Dump data
-var_dump($data);
-
 // This example will return data for a specific game
 echo "<h1>3) Single game data</h1>";
 $games = new Games();
