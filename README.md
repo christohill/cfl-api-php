@@ -17,7 +17,7 @@ You can request access to the API at [api.cfl.ca/key-request](http://api.cfl.ca/
 All endpoints in the API are mapped to their own methods in the wrapper. You can see all the [method names below](#methods). There is also a [folder full of examples](examples/) to reference.
 
 #### Simple usage
-```
+```php
 use CFLPHP\Teams\Teams;
 $teams = new Teams();
 $teams->setKey('edf59be9216e66eb17093574376d4c5f');
@@ -30,7 +30,7 @@ There are a few ways to set an API key.
 1. Set an .env variable (CFLPHP_Key): `CFLPHP_Key="edf59be9216e66eb17093574376d4c5f"`
 2. Set as an argument to the constructor: `$teams = new Teams('edf59be9216e66eb17093574376d4c5f')`
 3. Use `setKey` setter method after the class has been instantiated:
-```
+```php
 $teams = new Teams();
 $teams->setKey('edf59be9216e66eb17093574376d4c5f');
 ```
@@ -38,7 +38,7 @@ $teams->setKey('edf59be9216e66eb17093574376d4c5f');
 #### Request configuration
 Most methods/endpoints accept some sort of configuration (include, sort, filter, pagination). Refer to [method names below](#methods) to see which accept these. These are set as a multidimensional array like this:
 
-```
+```php
 $config = array(
     'include' => array(),
     'sort' => array(),
@@ -54,7 +54,7 @@ There is some special formatting for each config type:
 
 ##### Include
 The API accepts comma separated values, so just a simple array will work for this:
-```
+```php
 $config = array(
     'include' => array(
         'boxscore',
@@ -65,7 +65,7 @@ $config = array(
 
 ##### Sort
 The API accepts comma separated values, so just a simple array will work for this:
-```
+```php
 $config = array(
     'sort' => array(
         'height',
@@ -77,7 +77,7 @@ Note: Using **-** in front of the sort term will reverse the order
 
 ##### Filter
 The API can accept multiple filters to try and narrow down the data you need. There is a slight change here from the original API to help keep these filters legible.
-```
+```php
 $config = array(
     'filter' => array(
         "team_2 == TOR",
@@ -87,7 +87,7 @@ $config = array(
 ```
 Instead of using the [property][operator] format, the wrapper uses simple strings with PHP style operators. The operators are as follows:
 
-```
+```php
 '==' => 'eq'
 '!=' => 'ne'
 '>' => 'gt'
@@ -100,7 +100,7 @@ Instead of using the [property][operator] format, the wrapper uses simple string
 
 ##### Pagination
 Pagination is as simple as passing a page number and size to the config array.
-```
+```php
 $config = array(
     'pagination' => array(
         'number' => 2,
